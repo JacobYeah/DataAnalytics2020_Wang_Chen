@@ -28,3 +28,6 @@ boxplot(Auto$weight)
 mean(Auto$weight)
 median((Auto$weight))
 
+data1<-read.csv(file.choose(), header = T)
+data1
+
