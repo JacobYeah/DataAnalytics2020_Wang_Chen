@@ -166,12 +166,12 @@ rpart.plot(bankModel1,type = 3,fallen.leaves=T)
 
 fit <- predict(bankModel1,mbank[testing,-21],type = "class")
 tree.result <- as.numeric(as.character(fit))
-View(mbank[testing,])
+
 test <- as.data.frame(test)
-View(test)
+
 true.result <- as.numeric(as.character(test[,9]))
 tree.out <- as.data.frame(cbind(true.result,tree.result))
-View(tree.out)
+
 
 accuracy_ <- (count(tree.out[which(tree.out$true.result == tree.out$tree.result),]))/dim(tree.out)[1]
 accuracy_*100
